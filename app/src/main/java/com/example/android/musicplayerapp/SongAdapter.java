@@ -31,22 +31,24 @@ public class SongAdapter extends ArrayAdapter<Song> {
         }
 
         final Song currentSong = getItem(position);
+
         TextView artistName = (TextView) listItemView.findViewById(R.id.artist_text_view);
         artistName.setText(currentSong.getmArtistName());
+
         TextView songName = (TextView) listItemView.findViewById(R.id.song_text_view);
         songName.setText(currentSong.getmSongName());
-
 
         listItemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nowPlayingIntent = new Intent(getContext(), CurrentSong.class);
-                nowPlayingIntent.putExtra("Song name", currentSong.getmSongName());
-                nowPlayingIntent.putExtra("Artist name", currentSong.getmArtistName());
-                getContext().startActivity(nowPlayingIntent);
+                Intent nowPlaying = new Intent(getContext(), CurrentSong.class);
+                nowPlaying.putExtra("Song name", currentSong.getmSongName());
+                nowPlaying.putExtra("Artist name", currentSong.getmArtistName());
+                getContext().startActivity(nowPlaying);
             }
         });
 
         return listItemView;
-    }
+        }
+
 }
