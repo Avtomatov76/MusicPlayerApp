@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Music Player App</string>
+
+    <string name="choose_category">Choose Your Category</string>
+
+    <string name="dance_music">Dance Music</string>
+
+    <string name="rock_music">Rock</string>
+
+    <string name="contemporary_music">Contemporary</string>
+    <string name="title_activity_rock">Rock</string>
+
+    <string name="song_list">Song List</string>
+
+</resources>
